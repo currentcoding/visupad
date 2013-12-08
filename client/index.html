@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <title>VISUPAD.com</title>
+	<meta name="description" content="VISUPAD, the online whiteboard. Work as team in real-time. VISUPAD provides multi-user sketching and features images and text." />
+	<meta name="keywords" content="VISUPAD,Online Whiteboard, Draw Together, Layout Online, Multi-user Drawing, Draw Online, Team work" />
+	<meta property="og:title" content="VISUPAD - Online Whiteboard" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://visupad.com" />
+	<meta property="og:description" content="VISUPAD is an online whiteboard. You can work as team in real-time. VISUPAD provides multi-user sketching and features images and text." />
+	<link rel="stylesheet",type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet",type="text/css" href="css/styles.css"/>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+	<div class="wrapper">
+		<div class="lightbox" id="lightbox">
+			<div class="info_box_wrap" id="info_box_wrap">
+				<div class="close_lightbox" id="close_lightbox"><img src="img/close.png" width="40" height="40" alt="close lightbox" /></div>
+				<div id="invite" class="info_box">
+					TO INVITE SOMEBODY<br />
+					Just copy and share the URL below:<br />
+					<input id="share_URL"  />
+				</div>
+				<div id="new_board" class="info_box">
+					NEW SESSION<br />
+					Press the button to open VISUPAD in a new tab:<br />					
+					<a class="button full_button button_margin"  href="http://www.visupad.com" target="_blank">NEW<img src="img/new_white.png" /></a>
+				</div>
+				<div id="impress_text" class="info_box">
+					IMPRESS<br />
+					<ul class="welcome">
+						<li class="impress_item">VISUPAD is a whiteboard  application which makes it possible to connect several people to collaborate in real-time.</li>
+						<li class="impress_item">VISUPAD  provides multi-user sketching and features images and text.</li>
+					</ul>			
+					<img class="impress_item" src="img/infos.jpg" width="305" height="15" alt="impress" />
+				</div>
+			</div>
+		</div>
+		<div class="container_right">
+			<div class="options_container">
+				<div class="option_board" id="brush_text">
+					<div class="color_bar" id="color_bar" >
+						<div class="color_box" id="yellow"><div class=" color yellow"></div></div>
+						<div class="color_box" id="red"><div class="color red"></div></div>
+						<div class="color_box" id="green"><div class="color green"></div></div>
+						<div class="color_box" id="baby"><div class="color baby"></div></div>
+						<div class="color_box" id="blue"><div class="color blue"></div></div>
+						<div class="color_box color_active" id="black"><div class="color black"></div></div>
+					</div>
+					
+					<!------------ brush_options ---------------->
+					<div class="option_bar" id="brush_options">
+						<div class="option_box option_box_active" id="pencil"></div>
+						<div class="option_box" id="brush"></div>
+						<div class="option_box" id="eraser"></div>
+					</div>
+					
+					<!------------ text_options ---------------->
+					<div  class="option_bar" id="text_options">
+						<form>
+							<textarea name="message" class="textlabel_container" id="message" ></textarea>
+							<a class="button full_button" id="text_label">SUBMIT</a>
+							
+							<div id="weightButton" class="black_button bold">bold <input id="weight" type="checkbox" name="font-weight" value="bold"></div>
+						</form>
+					</div>
+					
+					<!------------ image_options ---------------->
+					<div class ="image_options" id="image_options">
+						<div class="filters" id="make_sw" > </div>
+						<form>
+							<input class = "image_form" type="file" id="files" name="file" />
+							<a class="button image_upload" >UPLOAD</a>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+			<div class="tools_container">
+				<div class="toolbar">
+					<div class="tool tool_active" id="draw"></div>	
+					<div class="tool" id="cross"></div>	
+					<div class="tool" id="pic"></div>	
+					<div class="tool" id="text"></div>	
+				</div>				
+			</div>
+			<div class="chat_container">
+				<div class="chat_box_shadow">
+					<div class="logo">VISUPAD</div>
+					<div id="conversation">					
+						<div class="welcome">
+							<p>WELCOME</p>
+							<ul class="welcome">
+								<li>You can draw.</li>
+								<li>You can drag&drop Images.</li>
+								<li>You can add text labels.</li>
+								<li><p>You can invite partners <br> by sharing the current URL.</p><br></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="chat_bar">
+					<input id="chat_entry"  />
+					<a class="button send_button" id="chat_send">SEND</a>					
+				</form>
+			</div>	
+		</div>
+		<div class="container_left">
+			<div class="canvas_container" id="canvas_container">
+				<canvas id="colorCanvas" width="400" height="400" >    This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>
+				<canvas id="objectCanvas" width="400" height="400" >    This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>				
+				<canvas id="canvas" width="400" height="400" >    This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>
+				<div class="clock" id="clock" ><div class="load_box_one"></div><div class="load_box_two"></div><div class="load_box_three"></div></div>
+				<div class="intro_box_wrap" id="intro_box_wrap">
+					<div class="close_lightbox" id="close_introbox" title="close lightbox"></div>
+					<div class="intro_box" id="intro_box" title="click to start">
+						<img id="intro_img" src="img/intro_infobox.png" alt="click here to continue" />
+						<div class="start_text">click to start</div>
+					</div>
+					<div class="intro_box_wrap_cover" id="intro_box_wrap_cover"></div>
+				</div>				
+			</div>
+			<div class="footer">
+				<ul class="footer_bar">
+					<a href="help.html" target="_blank" ><li class="footer_item footer_info">HELP</li><a/>
+					<li class="footer_item popup footer_info" id="impress_button" >IMPRESS</li>				
+					<li class="footer_item black_button inviteUser popup" id="invite_button" title="let user join">INVITE <img src="img/invite.png" /></li>
+					<li class="footer_item black_button inviteUser popup" id="new_button" title="VISUPAD in new tab">NEW <img src="img/new.png" /></li>
+					<li class="footer_item black_button item_margin"><a id="download_pic" title="download whiteboard" >SAVE<img src="img/save.png" /></a></li>
+					<li class="footer_item black_button item_margin" id="set_name" title="set your chat name">SET</li>
+					<li class="footer_item"><form><input id="name_entry" placeholder="YOUR NAME"  /></form></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>	
+	<!-- configuration -->
+	<script src="config.js"></script>
+	<!-- scripts -->
+	<script src="scripts/brushLoader.js"></script>
+	<script src="scripts/objectStorage.js"></script>
+	<script src="scripts/display.js"></script>	
+	<script src="scripts/interfaceUpdate.js"></script>
+	<script src="scripts/inputEdit.js"></script>		
+	<script src="scripts/manager.js"></script>
+	<script src="scripts/connection.js"></script>
+	<script src="scripts/input.js"></script>
+	<script src="scripts/rect.js"></script>
+	<script src="scripts/rectTransform.js"></script>
+	<script src="scripts/imgBox.js"></script>
+	<script src="scripts/textBox.js"></script>
+	<script src="scripts/textEdit.js"></script>
+	<script src="scripts/upload.js"></script>
+	<script src="scripts/filter.js"></script>
+	<!-- main -->
+	<script src="main.js"></script>
+  </body>
+</html>
